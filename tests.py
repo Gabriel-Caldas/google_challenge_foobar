@@ -59,6 +59,7 @@ def path_length(graph, start, end):
             if node not in prev_nodes:
                 node_w = graph[node][1]
                 nxt_nodes.extend(graph[node])
+                print(nxt_nodes)
         print(nxt_nodes)
         for nxt_node in nxt_nodes:
             if end in graph[nxt_node]:
@@ -70,7 +71,8 @@ def path_length(graph, start, end):
         curr_nodes = nxt_nodes
 
 graph = build_graph()
-print(graph)
+print(graph['A'])
 # print(graph)
-# print(path_length(graph, 'A', 'I'))
+# print(graph)
+# path_length(graph, 'A', 'I')
 # BFS_SP(graph, 'A', 'D')
